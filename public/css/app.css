@@ -101,7 +101,7 @@ main .products-wrapper .titolo-prodotto {
   left: 50%;
   transform: translate(-50%);
   margin-top: 25px;
-  font-size: 23px;
+  font-size: 20px;
   color: #002D73;
   font-weight: bold;
 }
@@ -110,7 +110,6 @@ main .products-wrapper .arrow-left, main .products-wrapper .arrow-right {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  left: 0px;
   top: 50%;
   height: 80px;
   width: 50px;
@@ -121,7 +120,10 @@ main .products-wrapper .arrow-left a, main .products-wrapper .arrow-right a {
   color: #fff;
 }
 main .products-wrapper .arrow-right {
-  left: 97%;
+  right: 0%;
+}
+main .products-wrapper .arrow-rleftight {
+  left: 0%;
 }
 main .products-wrapper .descrizione {
   line-height: 30px;

@@ -85,14 +85,13 @@ main{
          left: 50%;
          transform: translate(-50%);
          margin-top: 25px;
-         font-size: 23px;
+         font-size: 20px;
          color: #002D73;
          font-weight: bold;
         }
         .arrow-left,.arrow-right{
             @include flex-col;
             @include flex-center;
-            left: 0px;
             top: 50%;
             height: 80px;
             width: 50px;
@@ -103,7 +102,10 @@ main{
             }
         }
         .arrow-right{
-            left: 97%;
+            right: 0%;
+        }
+        .arrow-rleftight{
+            left: 0%;
         }
         .descrizione{
            line-height: 30px;
