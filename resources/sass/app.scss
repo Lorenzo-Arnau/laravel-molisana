@@ -33,7 +33,7 @@ header{
             ul{
                 @include flex-row;
                 width: 100%;
-                height: 90%;
+                height: 100%;
                 justify-content: space-around;
                 align-items: center;
                 list-style: none;
@@ -45,7 +45,7 @@ header{
                     color: #000;
                     padding: 15px;
                     &:hover{
-                        background-color: aquamarine;      
+                        background-color: #B8DAE4;      
                     }
                 }
             }
@@ -54,19 +54,111 @@ header{
 }
 main{
     @include flex-row;
-    flex-wrap: wrap;
-    align-self: center;
-    justify-content: space-between;
-    width: 80%;
-    height:100vh;
-    background-color: aquamarine;
-    .product-box{
-        height: 200px;
-        width: 300px;
-        background-color: beige;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-size: contain;
+    .section{
+        @include flex-row;
+        flex-wrap: wrap;
+        align-self: center;
+        justify-content: space-around;
+        background-image: url('/img/sfondo.jpg');
+        width: 100%;
+        .product-box{
+            width: 500px;
+            margin-bottom: 20px;
+            position: relative;
+            img{
+                width: 100%;
+            }
+        }       
+    }
+    .products-wrapper{
+        @include flex-col;
+        width: 70%;
         position: relative;
+        span{
+          position: absolute;  
+        }
+        .titolo-prodotto{
+         left: 50%;
+         transform: translate(-50%);
+         margin-top: 25px;
+         font-size: 23px;
+         color: #002D73;
+         font-weight: bold;
+        }
+        .arrow-left,.arrow-right{
+            @include flex-col;
+            @include flex-center;
+            left: 0px;
+            top: 50%;
+            height: 80px;
+            width: 50px;
+            background-color: rgba($color: #fff, $alpha: 0.5);
+            a{
+                font-size: 35px;
+                color: #fff;
+            }
+        }
+        .arrow-right{
+            left: 97%;
+        }
+        .descrizione{
+           line-height: 30px;
+           min-height: 150px;
+           padding: 40px 100px;
+           width: 100%;
+           font-size: 20px;
+           background-color: #B8DAE4;
+           color:#002D73;
+        }
         img{
             width: 100%;
+        }
+    }
+    
+}
+footer{
+    @include flex-row;
+    justify-content: space-between;
+    height: 800px;
+    width: 100%;
+    color: #848D9B;
+    background-image: url('https://www.lamolisana.it/wp-content/uploads/2020/06/footer-montagne-bottom.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    .column{
+        width: 33%;
+        height: 100%;
+    }
+    .logo-col{
+        @include flex-col;
+        @include flex-center;
+        img{
+            width: 70%;
+            margin-bottom: 40px;
+        }
+    }
+    .pastificio-col,.collezione-col{
+        @include flex-col;
+        justify-content: center;
+        ul{
+            margin:20px 50px;
+            li{
+                margin-bottom: 5px;
+                list-style: none;
+            }
+            .first{
+                margin-bottom: 25px;
+            }
+        }
+    }
+    .collezione-col{
+        justify-content: flex-start;
+        ul{
+            margin-top: 200px;
         }
     }
 }
