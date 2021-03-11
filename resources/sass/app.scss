@@ -1,1 +1,28 @@
-//
+@import "variables";
+*{
+    @include reset;
+}
+#root{
+    @include flex-col;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+main{
+    @include flex-row;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 80vh;
+    background-color: aquamarine;
+    .product-box{
+        height: 200px;
+        width: 300px;
+        background-color: beige;
+        position: relative;
+        img{
+            width: 100%;
+        }
+    }
+}

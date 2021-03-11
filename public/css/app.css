@@ -1,1 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: space-between;
+  width: 80%;
+  height: 80vh;
+  background-color: aquamarine;
+}
+main .product-box {
+  height: 200px;
+  width: 300px;
+  background-color: beige;
+  position: relative;
+}
+main .product-box img {
+  width: 100%;
+}
