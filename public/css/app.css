@@ -73,19 +73,33 @@ main {
 }
 main .section {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-self: center;
+  flex-direction: column;
   justify-content: space-around;
   background-image: url("/img/sfondo.jpg");
   width: 100%;
 }
-main .section .product-box {
-  width: 500px;
-  margin-bottom: 20px;
-  position: relative;
+main .section h2 {
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px 0px;
+  color: #002D73;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 50px;
 }
-main .section .product-box img {
+main .section .subsec {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: center;
+  min-height: 600px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+main .section .subsec .product-box {
+  width: 500px;
+  margin: 10px 10px;
+}
+main .section .subsec .product-box img {
   width: 100%;
 }
 main .products-wrapper {

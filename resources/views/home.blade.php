@@ -143,11 +143,36 @@ $data = '[
     </header>
     <main>
       <div class="section">
-        @foreach ($array as $key => $item)
+        <div class="subsec lunga">
+          <h2>LE LUNGHE</h2>
+          @foreach ($array as $key => $item)
+          @if ($item["tipo"] == "lunga")
           <div class="product-box">
               <a href="/products/{{$key}}"><img src="{{$item["src"]}}" alt=""></a>
-          </div> 
+          </div>        
+          @endif
+          @endforeach 
+        </div>
+        <div class="subsec corta">
+          <h2>LE CORTE</h2>
+          @foreach ($array as $key => $item)
+          @if ($item["tipo"] == "corta")
+          <div class="product-box">
+              <a href="/products/{{$key}}"><img src="{{$item["src"]}}" alt=""></a>
+          </div>        
+          @endif
+          @endforeach 
+        </div>
+        <div class="subsec cortissima">
+          <h2>LE CORTISSIME</h2>
+          @foreach ($array as $key => $item)
+          @if ($item["tipo"] == "cortissima")
+          <div class="product-box">
+              <a href="/products/{{$key}}"><img src="{{$item["src"]}}" alt=""></a>
+          </div>        
+          @endif
         @endforeach 
+        </div>
       </div>
     </main>
    <footer>

@@ -59,20 +59,33 @@ main{
     min-height: 100vh;
     background-size: contain;
     .section{
-        @include flex-row;
-        flex-wrap: wrap;
-        align-self: center;
+        @include flex-col;
         justify-content: space-around;
         background-image: url('/img/sfondo.jpg');
         width: 100%;
-        .product-box{
-            width: 500px;
+        h2{
+            width: 100%;
+            margin-top: 5px;
+            padding: 5px 0px;
+            color: #002D73;
+            background-color: rgba($color: #fff, $alpha: 0.7);
+            height: 50px;
+        }
+        .subsec{
+            @include flex-row;
+            flex-wrap: wrap;
+            align-self: center;
+            min-height: 600px;
             margin-bottom: 20px;
-            position: relative;
-            img{
-                width: 100%;
-            }
-        }       
+            width: 90%;
+            .product-box{
+                width: 500px;
+                margin: 10px 10px;
+                img{
+                    width: 100%;
+                }
+            }       
+        }
     }
     .products-wrapper{
         @include flex-col;

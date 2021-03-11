@@ -148,7 +148,7 @@ $data = '[
       <img src="{{ $array[$idProduct]['src-p']}}" alt="">
       <span class="titolo-prodotto">{{ $array[$idProduct]['titolo']}}</span>
       <span class="arrow-right"><a href=""><i class="fas fa-angle-right"></i></a></span>
-      <div class="descrizione">{{ $array[$idProduct]['descrizione']}}</div>
+      <div class="descrizione">{{{$array[$idProduct]['descrizione']}}}</div>
       </div>
     </main>
    <footer>
