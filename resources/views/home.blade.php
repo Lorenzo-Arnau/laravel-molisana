@@ -137,7 +137,7 @@ $data = '[
 <body>
   <div id="root">
     <header>
-        
+      @include('parts.header')
     </header>
     <main>
         @foreach ($array as $key => $item)
@@ -147,7 +147,7 @@ $data = '[
         @endforeach 
     </main>
    <footer>
-   
+    @include('parts.footer')
    </footer>
  </div>
 </body>

@@ -137,7 +137,7 @@ $data = '[
 <body>
   <div id="root">
     <header>
-        
+      @include('parts.header')
     </header>
     <main>
      Prodotto numero{{ $idProduct }}
