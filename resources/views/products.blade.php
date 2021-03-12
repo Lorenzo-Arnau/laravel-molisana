@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel Molisana</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/it/thumb/4/41/Logo_PASTA_LA_MOLISANA.png/1200px-Logo_PASTA_LA_MOLISANA.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.min.css" integrity="sha512-QfDd74mlg8afgSqm3Vq2Q65e9b3xMhJB4GZ9OcHDVy1hZ6pqBJPWWnMsKDXM7NINoKqJANNGBuVRIpIJ5dogfA==" crossorigin="anonymous" />
 </head>
 <body>
