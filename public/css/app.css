@@ -161,6 +161,7 @@ main .products-wrapper .descrizione {
   line-height: 30px;
   min-height: 150px;
   padding: 40px 100px;
+  margin-bottom: 30px;
   width: 100%;
   font-size: 20px;
   background-color: #B8DAE4;
@@ -170,6 +171,7 @@ main .products-wrapper .descrizione {
   main .products-wrapper .descrizione {
     padding: 10px 20px;
     font-size: 15px;
+    margin-bottom: 5px;
   }
 }
 main .products-wrapper img {

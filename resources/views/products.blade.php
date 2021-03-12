@@ -15,11 +15,15 @@
     </header>
     <main>
       <div class="products-wrapper">
-      <span class="arrow-left"><a href="/products/{{$idProduct - 1}}"><i class="fas fa-angle-left"></i></a></span>
+
+      @include('parts.arrowleft')
+
       <img src="{{ $array[$idProduct - 1]['src-h']}}" alt="">
       <img src="{{ $array[$idProduct - 1]['src-p']}}" alt="">
       <span class="titolo-prodotto">{{ $array[$idProduct - 1]['titolo']}}</span>
-      <span class="arrow-right"><a href="/products/{{$idProduct + 1}}"><i class="fas fa-angle-right"></i></a></span>
+
+      @include('parts.arrowright')
+
       <div class="descrizione">{!!$array[$idProduct - 1]['descrizione']!!}</div>
       </div>
     </main>
@@ -29,25 +33,3 @@
  </div>
 </body>
 </html>
-
-
-@php
-// function carouselLeft($idProduct,$array) {
-//  $idProduct + 1;
-//  if ($idProduct == count($array)) {
-//   $idProduct = 0; 
-//  }
-//  return $idProduct;  
-// };
-
-
-
-// function carouselRight($idProduct,$array) {
-//  $idProduct - 1;
-//  if ($idProduct == - 1) {
-//   $idProduct = count($array) - 1; 
-//  }
-//  return $idProduct;  
-// };
-
-@endphp
