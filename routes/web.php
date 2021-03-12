@@ -32,10 +32,10 @@ Route::get('/', function () {
 });
 
 Route::get('/products/{id?}', function($id=null) {
-    if(empty($id)){
+    $array = config('pasta');
+    if(empty($id) || $id == count($array) + 1){
      return redirect('/');
     }
-    $array = config('pasta');
     return view('products',
         ['idProduct' => $id],
         ['array'=> $array ]);
