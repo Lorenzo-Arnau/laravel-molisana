@@ -161,7 +161,6 @@ main .products-wrapper .descrizione {
   line-height: 30px;
   min-height: 150px;
   padding: 40px 100px;
-  margin-bottom: 30px;
   width: 100%;
   font-size: 20px;
   background-color: #B8DAE4;
@@ -171,7 +170,6 @@ main .products-wrapper .descrizione {
   main .products-wrapper .descrizione {
     padding: 10px 20px;
     font-size: 15px;
-    margin-bottom: 5px;
   }
 }
 main .products-wrapper img {
@@ -185,6 +183,7 @@ footer {
   min-height: 800px;
   width: 100%;
   color: #848D9B;
+  margin-top: 30px;
   background-image: url("https://www.lamolisana.it/wp-content/uploads/2020/06/footer-montagne-bottom.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
@@ -201,6 +200,9 @@ footer {
     justify-content: center;
     align-items: center;
   }
+}
+footer li {
+  cursor: pointer;
 }
 footer .column {
   width: 33%;
