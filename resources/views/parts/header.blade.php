@@ -4,7 +4,7 @@
     </div>
     <div class="menu">
         <ul>
-            <li><a href="/">HOME</a></li>
+            <li><a href="/" >HOME</a></li>
             <li><a href="">PRODOTTI</a></li>
             <li><a href=""> NEWS</a></li>
         </ul>

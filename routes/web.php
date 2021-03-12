@@ -12,14 +12,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//predere l'array della pasta dalla config pasta.php e inviarlo al template
 Route::get('/', function () {
-    return view('home');
+    $array = config('pasta');
+    return view('home' ,[
+        'array'=> $array
+    ]);
 });
 
 Route::get('/products/{id}', function($id) {
+    $array = config('pasta');
     return view('products',
-        ['idProduct' => $id]
-    );
+        ['idProduct' => $id],
+        ['array'=> $array ]);
 });
 

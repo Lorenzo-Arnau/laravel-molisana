@@ -51,6 +51,9 @@ header .navbar .menu ul {
   align-items: center;
   list-style: none;
 }
+header .navbar .menu ul .home {
+  background-color: #B8DAE4;
+}
 header .navbar .menu ul li {
   padding: 15px;
 }
