@@ -31,13 +31,23 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/products/{id?}', function($id=null) {
+Route::get('/products/{id?}', function($id = null) {
     $array = config('pasta');
-    if(empty($id) || $id == count($array) + 1){
-     return redirect('/');
+    switch ($id) {
+        case $id === 0:
+            return redirect('/products/12');
+            break;
+        case $id == count($array) + 1:
+            return redirect('/products/1');
+            break;
+        case $id > count($array) + 1:  
+            return abort(404);        
+        default:
+            return view('products',
+                ['idProduct' => $id],
+                ['array'=> $array ]);
+            break;
     }
-    return view('products',
-        ['idProduct' => $id],
-        ['array'=> $array ]);
+    
 });
 
