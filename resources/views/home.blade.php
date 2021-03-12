@@ -21,7 +21,7 @@
           @foreach ($array as $key => $item)
           @if ($item["tipo"] == "lunga")
           <div class="product-box">
-              <a href="/products/{{$key}}"><img src="{{$item["src"]}}" alt=""></a>
+              <a href="/products/{{$key + 1}}"><img src="{{$item["src"]}}" alt=""></a>
           </div>        
           @endif
           @endforeach 
@@ -31,7 +31,7 @@
           @foreach ($array as $key => $item)
           @if ($item["tipo"] == "corta")
           <div class="product-box">
-              <a href="/products/{{$key}}"><img src="{{$item["src"]}}" alt=""></a>
+              <a href="/products/{{$key + 1}}"><img src="{{$item["src"]}}" alt=""></a>
           </div>        
           @endif
           @endforeach 
@@ -41,7 +41,7 @@
           @foreach ($array as $key => $item)
           @if ($item["tipo"] == "cortissima")
           <div class="product-box">
-              <a href="/products/{{$key}}"><img src="{{$item["src"]}}" alt=""></a>
+              <a href="/products/{{$key + 1}}"><img src="{{$item["src"]}}" alt=""></a>
           </div>        
           @endif
         @endforeach 

@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //predere l'array della pasta dalla config pasta.php e inviarlo al template
+
+
+
+// ESEMPIO DI REDIRECT
+// -----------------------------------
+// Route::get('/',function(){
+//     return redirect('/home');
+// });
+//-----------------------------------
+
+
 Route::get('/', function () {
     $array = config('pasta');
     return view('home' ,[
@@ -20,7 +31,10 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/products/{id}', function($id) {
+Route::get('/products/{id?}', function($id=null) {
+    if(empty($id)){
+     return redirect('/');
+    }
     $array = config('pasta');
     return view('products',
         ['idProduct' => $id],

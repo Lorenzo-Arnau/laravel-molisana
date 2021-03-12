@@ -102,6 +102,11 @@ main .section .subsec .product-box {
   width: 500px;
   margin: 10px 10px;
 }
+@media screen and (max-width: 960px) {
+  main .section .subsec .product-box {
+    width: 300px;
+  }
+}
 main .section .subsec .product-box img {
   width: 100%;
 }
@@ -122,6 +127,11 @@ main .products-wrapper .titolo-prodotto {
   color: #002D73;
   font-weight: bold;
 }
+@media screen and (max-width: 450px) {
+  main .products-wrapper .titolo-prodotto {
+    font-size: 15px;
+  }
+}
 main .products-wrapper .arrow-left, main .products-wrapper .arrow-right {
   display: flex;
   flex-direction: column;
@@ -132,15 +142,20 @@ main .products-wrapper .arrow-left, main .products-wrapper .arrow-right {
   width: 50px;
   background-color: rgba(255, 255, 255, 0.5);
 }
+@media screen and (max-width: 450px) {
+  main .products-wrapper .arrow-left, main .products-wrapper .arrow-right {
+    width: 20px;
+  }
+}
 main .products-wrapper .arrow-left a, main .products-wrapper .arrow-right a {
   font-size: 35px;
   color: #fff;
 }
 main .products-wrapper .arrow-right {
-  right: 0%;
+  right: 0px;
 }
 main .products-wrapper .arrow-rleftight {
-  left: 0%;
+  left: 0px;
 }
 main .products-wrapper .descrizione {
   line-height: 30px;
@@ -151,6 +166,12 @@ main .products-wrapper .descrizione {
   background-color: #B8DAE4;
   color: #002D73;
 }
+@media screen and (max-width: 450px) {
+  main .products-wrapper .descrizione {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
 main .products-wrapper img {
   width: 100%;
 }
@@ -159,16 +180,34 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 800px;
+  min-height: 800px;
   width: 100%;
   color: #848D9B;
   background-image: url("https://www.lamolisana.it/wp-content/uploads/2020/06/footer-montagne-bottom.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 960px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 450px) {
+  footer {
+    justify-content: center;
+    align-items: center;
+  }
+}
 footer .column {
   width: 33%;
   height: 100%;
+}
+@media screen and (max-width: 960px) {
+  footer .column {
+    margin: 40px 25px;
+  }
 }
 footer .logo-col {
   display: flex;
@@ -180,6 +219,10 @@ footer .logo-col img {
   width: 70%;
   margin-bottom: 40px;
 }
+footer .logo-col div {
+  display: flex;
+  flex-direction: column;
+}
 footer .pastificio-col, footer .collezione-col {
   display: flex;
   flex-direction: column;
@@ -187,6 +230,11 @@ footer .pastificio-col, footer .collezione-col {
 }
 footer .pastificio-col ul, footer .collezione-col ul {
   margin: 20px 50px;
+}
+@media screen and (max-width: 960px) {
+  footer .pastificio-col ul, footer .collezione-col ul {
+    margin: 10px 0px;
+  }
 }
 footer .pastificio-col ul li, footer .collezione-col ul li {
   margin-bottom: 5px;
@@ -200,4 +248,10 @@ footer .collezione-col {
 }
 footer .collezione-col ul {
   margin-top: 200px;
+}
+@media screen and (max-width: 960px) {
+  footer .collezione-col ul {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
 }

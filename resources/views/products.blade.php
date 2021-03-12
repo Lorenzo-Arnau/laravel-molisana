@@ -16,11 +16,11 @@
     <main>
       <div class="products-wrapper">
       <span class="arrow-left"><a href=""><i class="fas fa-angle-left"></i></a></span>
-      <img src="{{ $array[$idProduct]['src-h']}}" alt="">
-      <img src="{{ $array[$idProduct]['src-p']}}" alt="">
-      <span class="titolo-prodotto">{{ $array[$idProduct]['titolo']}}</span>
+      <img src="{{ $array[$idProduct - 1]['src-h']}}" alt="">
+      <img src="{{ $array[$idProduct - 1]['src-p']}}" alt="">
+      <span class="titolo-prodotto">{{ $array[$idProduct - 1]['titolo']}}</span>
       <span class="arrow-right"><a href=""><i class="fas fa-angle-right"></i></a></span>
-      <div class="descrizione">{!!$array[$idProduct]['descrizione']!!}</div>
+      <div class="descrizione">{!!$array[$idProduct - 1]['descrizione']!!}</div>
       </div>
     </main>
    <footer>
@@ -29,3 +29,9 @@
  </div>
 </body>
 </html>
+<?php
+function carouselLeft(index) {
+   
+}
+
+?>

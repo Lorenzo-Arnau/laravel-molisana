@@ -84,6 +84,9 @@ main{
             .product-box{
                 width: 500px;
                 margin: 10px 10px;
+                @media screen and (max-width: $tablet) {
+                    width: 300px;
+                       }
                 img{
                     width: 100%;
                 }
@@ -104,6 +107,9 @@ main{
          font-size: 20px;
          color: #002D73;
          font-weight: bold;
+         @media screen and (max-width: $mobile) {
+           font-size: 15px;
+            }
         }
         .arrow-left,.arrow-right{
             @include flex-col;
@@ -112,16 +118,19 @@ main{
             height: 80px;
             width: 50px;
             background-color: rgba($color: #fff, $alpha: 0.5);
+            @media screen and (max-width: $mobile) {
+              width: 20px;
+                 }
             a{
                 font-size: 35px;
                 color: #fff;
             }
         }
         .arrow-right{
-            right: 0%;
+            right: 0px;
         }
         .arrow-rleftight{
-            left: 0%;
+            left: 0px;
         }
         .descrizione{
            line-height: 30px;
@@ -131,6 +140,10 @@ main{
            font-size: 20px;
            background-color: #B8DAE4;
            color:#002D73;
+           @media screen and (max-width: $mobile) {
+            padding: 10px 20px;
+            font-size: 15px;
+             }
         }
         img{
             width: 100%;
@@ -141,15 +154,25 @@ main{
 footer{
     @include flex-row;
     justify-content: space-between;
-    height: 800px;
+    min-height: 800px;
     width: 100%;
     color: #848D9B;
     background-image: url('https://www.lamolisana.it/wp-content/uploads/2020/06/footer-montagne-bottom.jpg');
     background-position: bottom;
     background-repeat: no-repeat;
+    @media screen and (max-width: $tablet) {
+    @include flex-col;
+    justify-content: flex-start;
+    }
+    @media screen and (max-width: $mobile) {
+    @include flex-center;
+    }
     .column{
         width: 33%;
         height: 100%;
+        @media screen and (max-width: $tablet) {
+        margin:40px 25px;
+        }
     }
     .logo-col{
         @include flex-col;
@@ -158,12 +181,19 @@ footer{
             width: 70%;
             margin-bottom: 40px;
         }
+        div{
+            @include flex-col;
+        }    
     }
     .pastificio-col,.collezione-col{
         @include flex-col;
         justify-content: center;
         ul{
             margin:20px 50px;
+            @media screen and (max-width: $tablet) {
+            margin: 10px 0px;
+            }
+             
             li{
                 margin-bottom: 5px;
                 list-style: none;
@@ -171,12 +201,16 @@ footer{
             .first{
                 margin-bottom: 25px;
             }
-        }
+        }  
     }
     .collezione-col{
         justify-content: flex-start;
         ul{
             margin-top: 200px;
+            @media screen and (max-width: $tablet) {
+                margin-top: 20px;
+                margin-bottom: 60px;   
+                }
         }
     }
 }
